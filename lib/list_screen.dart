@@ -13,6 +13,7 @@ import 'package:screenshot/screenshot.dart';
 import 'package:share_plus/share_plus.dart';
 
 Future<QuoteList> fetchData(String something) async {
+  //ok
   final response = await http.post(Uri.parse('https://fitmuscle12.000webhostapp.com/Motivation_Quote/getQouteByID.php?id=$something'));
   if (response.statusCode == 200) {
     return QuoteList.fromJson(jsonDecode(response.body));
